@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>有意4｜告白氣球 MV 翻拍</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", Arial, sans-serif;
+      color: #23302d;
+      background: #f2f0e8;
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 8%;
+      background: #f2f0e8;
+      border-bottom: 1px solid #d6d0c3;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a,
+    .buttons a,
+    footer button {
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: #23302d;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+    }
+
+    nav a {
+      background: transparent;
+      color: #23302d;
+      border: 1px solid #c9b98e;
+    }
+ .hero {
+  	min-height: 70vh;
+ 	 display: flex;
+ 	 align-items: center;
+ 	 justify-content: center;
+ 	 padding: 80px 8%;
+ 	 color: white;
+ 	 text-align: center;
+	 background:
+    	linear-gradient(rgba(20, 35, 33, 0.55), rgba(20, 35, 33, 0.75)),
+    url("https://i.ytimg.com/vi/bu7nU9Mhpyo/maxresdefault.jpg") center/cover;
+}
+
+
+.hero-text {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+    .tag {
+      color: #d7c391;
+      font-weight: bold;
+    }
+
+    .hero h2 {
+      margin: 0 0 16px;
+      font-size: clamp(52px, 9vw, 110px);
+      line-height: 1;
+    }
+
+    .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+    .buttons .light-button {
+      background: white;
+      color: #23302d;
+    }
+
+    main {
+      width: min(1100px, 88%);
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 70px 0;
+      border-bottom: 1px solid #d6d0c3;
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 36px;
+    }
+
+    .info-box,
+    .card,
+    .member {
+      background: white;
+      border: 1px solid #d6d0c3;
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .info-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 20px;
+      margin-top: 24px;
+    }
+
+    .info-box p {
+      margin: 0;
+    }
+
+    .video-box {
+      display: grid;
+      place-items: center;
+      min-height: 360px;
+      padding: 24px;
+      text-align: center;
+      color: white;
+      border-radius: 8px;
+      background:
+        linear-gradient(rgba(20, 35, 33, 0.5), rgba(20, 35, 33, 0.7)),
+        url("images/poster.jpg") center/cover;
+    }
+
+    .video-box p,
+    .poster-box p {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .video-box span {
+      display: block;
+      margin-top: 8px;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+.poster-photos {
+  display: grid;
+  gap: 24px;
+}
+
+.poster-photos img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #d6d0c3;
+}
+
+    .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+  .team {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.member {
+  background: white;
+  border: 1px solid #d6d0c3;
+  border-radius: 8px;
+  padding: 18px;
+  text-align: center;
+}
+
+.member-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 14px;
+  border-radius: 8px;
+}
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 28px 8%;
+      background: #23302d;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer button {
+      background: #d7c391;
+      color: #23302d;
+      cursor: pointer;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        display: block;
+      }
+
+      nav {
+        justify-content: flex-start;
+        margin-top: 12px;
+      }
+
+      .info-box,
+      .two-column,
+      .cards,
+      .team {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 60vh;
+        padding: 70px 6%;
+      }
+
+      main {
+        width: 88%;
+      }
+
+      footer {
+        display: block;
+      }
+
+      footer button {
+        margin-top: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>有意4</h1>
+    <nav>
+      <a href="#about">企劃</a>
+      <a href="#mv">MV</a>
+      <a href="#poster">海報</a>
+      <a href="#behind">花絮</a>
+      <a href="#team">組員</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="tag">期末專案｜MV 翻拍</p>
+      <h2>告白氣球</h2>
+      <p>我們是「有意4」，周賊倫〈告白氣球〉現正熱映。</p>
+      <div class="buttons">
+        <a href="#mv">觀看 MV</a>
+        <a href="#behind" class="light-button">看幕後花絮</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="about">
+      <h2>Our Project</h2>
+      <p>矮油~不錯喔！歡迎來到專屬賊倫的網站，內容包含 MV、海報、幕後花絮和組員介紹。</p>
+
+      <div class="info-box">
+        <p><strong>歌曲：</strong>告白氣球</p>
+        <p><strong>組別：</strong>有意4</p>
+        <p><strong>主題：</strong>MV 翻拍</p>
+        <p><strong>指導教授：</strong>小麥 張瑞岩</p>
+      </div>
+    </section>
+
+    <section id="mv">
+      <h2>MV 成品</h2>
+      <div class="video-box">
+        <div>
+          <p>MV 影片區</p>
+          <span>之後可以把 YouTube 嵌入碼放在這裡</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="poster">
+      <h2>專案海報</h2>
+      <div class="two-column">
+      <div class="poster-photos">
+  <img src="images/poster1.jpg" alt="直式海報">
+  <img src="images/poster2.jpg" alt="橫式海報">
+</div>
+	
+             </div>
+    </section>
+
+    <section id="behind">
+      <h2>幕後花絮</h2>
+      <div class="cards">
+        <div class="card">
+          <img class="photo" src="images/拍攝現場.jpg" alt="拍攝現場">
+          <h3>拍攝現場</h3>
+          <p>我真的沒有印象我們在笑什麼，但看起來蠻好笑的。</p>
+        </div>
+        <div class="card">
+         <img class="photo" src="images/好害羞.jpg" alt="好害羞">
+          <h3>好害羞</h3>
+          <p>誰要來嗑cp，超派偉俊與咖啡Girl愛情故事現正熱播，錯過不再。</p>
+        </div>
+        <div class="card">
+          <img class="photo" src="images/殺青啦.jpg" alt="殺青啦">
+          <h3>殺青啦</h3>
+          <p>其他人不知道，但我真的很快樂，恨文山區太陽。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <h2>組員介紹</h2>
+      <div class="team">
+        <div class="member">
+          <div class="avatar">1</div>
+	   <img class="member-photo" src="images/組員1.jpg" alt="組員1">
+           <h3>吉他Boy｜吳翃穎</h3>
+          <p>攝影／初剪 調光／歌詞改寫</p>
+        </div>
+        <div class="member">
+          <div class="avatar">2</div>
+	  <img class="member-photo" src="images/組員2.jpg" alt="組員2">
+          <h3>超派偉俊｜戴枟柔</h3>
+          <p>分鏡設計／側拍 </p> 
+        </div>
+        <div class="member">
+          <div class="avatar">3</div>
+	  <img class="member-photo" src="images/組員3.jpg" alt="組員3">
+          <h3>咖啡Girl｜傅玟慈</h3>
+          <p>細剪 特效／場記 攝影</p>
+        </div>
+        <div class="member">
+          <div class="avatar">4</div>
+	  <img class="member-photo" src="images/組員4.jpg" alt="組員4">
+          <h3>周賊倫｜楊宜蓁</h3
+          <p> 海報製作／場記 側拍</p>
+        </div>
+        <div class="member">
+          <div class="avatar">5</div>
+	  <img class="member-photo" src="images/組員5.jpg" alt="組員5">
+          <h3>吉他Girl｜廖梓淇</h3>
+	  <p> 網站製作</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>有意4｜告白氣球 MV 翻拍企劃</p>
+    <button id="topButton">回到上方</button>
+  </footer>
+
+  <script>
+    const topButton = document.querySelector("#topButton");
+
+    topButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+</body>
+</html>
